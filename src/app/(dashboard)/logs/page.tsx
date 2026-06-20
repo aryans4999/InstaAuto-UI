@@ -156,7 +156,7 @@ export default function LogsPage() {
                         <Badge variant="outline" className="text-[10px] font-semibold bg-accent/5 border-accent/20 uppercase text-accent">
                           {log.source}
                         </Badge>
-                      </td>
+                      </TableCell>
                       <TableCell className="text-xs text-muted-foreground">
                         {new Date(log.timestamp).toLocaleString()}
                       </TableCell>

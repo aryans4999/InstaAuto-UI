@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { Label } from "@/components/ui/label";
 import { 
   RefreshCw, 
   Image as ImageIcon, 
@@ -302,7 +303,7 @@ export default function PostsPage() {
                 </div>
                 <CardDescription className="line-clamp-1 italic">
                   "{selectedPost.caption || "No Caption"}"
-                </Description>
+                </CardDescription>
               </div>
               <div className="flex flex-wrap gap-3">
                 <Button 

@@ -11,6 +11,7 @@ import { Key, Settings, Info, Save, Search, RefreshCw, AlertCircle, CheckCircle2
 import { instagramApi, configApi } from "@/lib/api";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface AccountInfo {
   id: string;
