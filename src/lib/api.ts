@@ -10,6 +10,11 @@ export const instagramApi = {
   getMediaDetail: (mediaId: string) => api.get(`/media/${mediaId}`),
   replyToComment: (commentId: string, mediaId: string, message: string, access_token?: string) => 
     api.post("/reply", { comment_id: commentId, media_id: mediaId, message, access_token }),
+  debugToken: () => api.get("/debug-token"),
+  postComment: (mediaId: string, message: string, access_token?: string) =>
+    api.post("/comment", { media_id: mediaId, message, access_token }),
+  deleteComment: (commentId: string) =>
+    api.delete(`/comment/${commentId}`),
 };
 
 export const configApi = {
