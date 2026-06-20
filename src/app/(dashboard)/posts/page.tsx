@@ -62,8 +62,10 @@ export default function PostsPage() {
       
       const postsRes = await instagramApi.getMedia("");
       setPosts(postsRes.data.data || []);
-    } catch (error) {
+    } catch (error: any) {
       console.error("Initialization error:", error);
+      const errMsg = error.response?.data?.detail || error.message || "Failed to fetch posts";
+      toast.error(errMsg);
     } finally {
       setLoading(false);
     }
